@@ -20,6 +20,12 @@ body {
   height: 50%;
 }
 
+.profile-photo {
+  border-radius: 50%;
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
+  margin-bottom: 10px;
+}
 
 h1,
 h2,

@@ -12,7 +12,6 @@
 body {
   background-color: #000000; /* CHANGE  THIS COLOR! */
   color: #4e4e4e;
-  font-family: Cursivey;
   margin: 0;
   padding: 0;
   background-size: cover;
@@ -108,7 +107,7 @@ a:hover {
 }
 
 .overlay-mf {
-  background-color: #006fdf;
+  background-color: #545e67;
 }
 
 .overlay-mf {

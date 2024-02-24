@@ -419,7 +419,7 @@
                         </h5>
                       </div>
                       <div>
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form id="myForm" action="https://formspree.io/f/xleqngjg" method="post" role="form" class="email-form">
                           <div class="row">
                             <div class="col-md-12 mb-3">
                               <div class="form-group">
@@ -458,6 +458,34 @@
                         </form>
                       </div>
                     </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("myForm");
+  var status = document.querySelector(".sent-message");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+    var xhr = new XMLHttpRequest();
+
+    xhr.open(form.method, form.action, true);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        status.style.display = "block"; // Display success message
+      } else {
+        var errorContainer = document.querySelector(".error-message");
+        errorContainer.style.display = "block"; // Display error message
+        errorContainer.textContent = "Oops! Something went wrong. Please try again later.";
+      }
+    };
+    xhr.send(data);
+  });
+});
+</script>
                     <div class="col-md-6">
                       <div class="title-box-2 pt-4 pt-md-0">
                         <h5 class="title-left">

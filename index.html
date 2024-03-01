@@ -459,17 +459,63 @@
                         </form>
                       </div>
                     </div>
-
-                    <script>
+<script>
                       document.addEventListener("DOMContentLoaded", function () {
                         var form = document.getElementById("myForm");
                         var status = document.querySelector(".sent-message");
-
+                    
                         form.addEventListener("submit", function (e) {
                           e.preventDefault();
                           var data = new FormData(form);
                           var xhr = new XMLHttpRequest();
-
+                          
+                          // Function to check if the input contains restricted words
+                          function containsRestrictedWords(input) {
+                            var restrictedWords = [
+                              // English inappropriate words
+                              "fuck", "sex", "lauda", "gaand", "chod", "asshole", "bitch", "bastard", "dickhead", 
+                              "cunt", "whore", "slut", "douchebag", "twat", "motherfucker", "nigger", "spic", "chink", 
+                              "kike", "wop", "gook", "retard", "faggot", "tranny", "midget", "gimp", "redneck", "hillbilly", 
+                              "towelhead", "blowjob", "masturbation", "orgasm", "ejaculate", "penis", "vagina", "breast", 
+                              "clitoris", "testicle", "cocaine", "heroin", "marijuana", "weed", "pot", "methamphetamine", 
+                              "LSD", "ecstasy", "crack",
+                              // Hindi inappropriate words
+                              "penis", "ass", "fool", "son of a bitch", "vagina", "penis", "fool", "motherfucker", "sisterfucker", 
+                              "asshole", "sex", "fucking", "penis", "vagina", "breasts", "penis", "vagina", "intercourse", "whore", 
+                              "cigarette",
+                              // Vulgar language
+                              "lauda", "gaand", "chutiya", "bhosdike", "choot", "lavda", "chutiye", "madarchod", "betichod", "gaandu",
+                              // Sexual content
+                              "sex", "chudai", "ling", "yoni", "boobs", "lund", "chut", "sambhog", "randi", "sutta",
+                              // Insulting terms
+                              "gadha", "chamda", "kutta", "bakchod", "haramkhor", "bevakuf", "boga", "besharam", "chor", "murga",
+                              // Offensive terms
+                              "gandi", "bakwas", "ashleel", "gutter", "ganda", "kamine", "dalit", "chugalkhor", "napak", "jahil",
+                              // Racial slurs
+                              "cheeni", "bhartiy", "bhartvasi", "gora", "kala", "angrez", "pakistani", "afghan", "nepali", "bangali"
+                            ]; // Add more words as needed
+                            for (var i = 0; i < restrictedWords.length; i++) {
+                              if (input.toLowerCase().includes(restrictedWords[i])) {
+                                return true;
+                              }
+                            }
+                            return false;
+                          }
+                    
+                          // Get the input values for all fields and check for restricted words
+                          var messageValue = form.querySelector("[name='message']").value;
+                          var subjectValue = form.querySelector("[name='subject']").value;
+                          var emailValue = form.querySelector("[name='email']").value;
+                          var nameValue = form.querySelector("[name='name']").value;
+                          
+                          if (containsRestrictedWords(messageValue) || containsRestrictedWords(subjectValue) ||
+                              containsRestrictedWords(emailValue) || containsRestrictedWords(nameValue)) {
+                            var errorContainer = document.querySelector(".error-message");
+                            errorContainer.style.display = "block"; // Display error message
+                            errorContainer.textContent = "Please refrain from using inappropriate language.";
+                            return; // Prevent form submission if restricted words are found
+                          }
+                    
                           xhr.open(form.method, form.action, true);
                           xhr.setRequestHeader("Accept", "application/json");
                           xhr.onreadystatechange = function () {

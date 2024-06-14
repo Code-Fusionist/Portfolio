@@ -10,7 +10,8 @@
 # General
 --------------------------------------------------------------*/
 body {
-  background-color: #000000; /* CHANGE  THIS COLOR! */
+  background-color: #000000;
+  /* CHANGE  THIS COLOR! */
   color: #4e4e4e;
   margin: 0;
   padding: 0;
@@ -22,15 +23,19 @@ body {
 
 .profile-photo {
   border-radius: 50%;
-  width: 150px; /* Adjust the size as needed */
-  height: 150px; /* Adjust the size as needed */
+  width: 150px;
+  /* Adjust the size as needed */
+  height: 150px;
+  /* Adjust the size as needed */
   margin-bottom: 10px;
 }
 
 .profile-photo1 {
   border-radius: 50%;
-  width: 35px; /* Adjust the size as needed */
-  height: 35px; /* Adjust the size as needed */
+  width: 35px;
+  /* Adjust the size as needed */
+  height: 35px;
+  /* Adjust the size as needed */
   margin-bottom: 10px;
 }
 
@@ -119,7 +124,7 @@ a:hover {
   }
 }
 
-.overlay-mf {
+/* .overlay-mf {
   background-color: #545e67;
 }
 
@@ -131,7 +136,7 @@ a:hover {
   height: 100%;
   width: 100%;
   opacity: 0.7;
-}
+} */
 
 .paralax-mf {
   position: relative;
@@ -179,12 +184,14 @@ a:hover {
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #ffffff; /* change */
+  color: #ffffff;
+  /* change */
 }
 
 .subtitle-a {
   text-decoration: none;
-  color: #ffffff; /* change */
+  color: #ffffff;
+  /* change */
 }
 
 .line-mf {
@@ -243,8 +250,10 @@ a:hover {
 }
 
 .socials .ico-square {
-  height: 40px; /* Adjust to your preferred height */
-  width: 40px; /* Adjust to your preferred width */
+  height: 40px;
+  /* Adjust to your preferred height */
+  width: 40px;
+  /* Adjust to your preferred width */
   font-size: 1.2rem;
   line-height: 1.6;
   margin: 0 15px 0 0;
@@ -284,8 +293,10 @@ a:hover {
 
 /*------/ Ico Circle /------*/
 .ico-square {
-  height: 100px; /* Adjust to your preferred height */
-  width: 100px; /* Adjust to your preferred width */
+  height: 100px;
+  /* Adjust to your preferred height */
+  width: 100px;
+  /* Adjust to your preferred width */
   font-size: 2rem;
   line-height: 1.55;
   margin: 0 auto;
@@ -913,7 +924,8 @@ a:hover {
 
 .service-box .ico-square i {
   line-height: 0;
-  font-size: 40px; /* Adjust the font size as needed */
+  font-size: 40px;
+  /* Adjust the font size as needed */
 }
 
 
@@ -989,8 +1001,10 @@ a:hover {
   border: 2px solid #18d26e;
 }
 
-.resume p, li {
-  color: #fff; /* Set the text color to white for <p> tags inside the .resume class */
+.resume p,
+li {
+  color: #fff;
+  /* Set the text color to white for <p> tags inside the .resume class */
 }
 
 
@@ -1187,6 +1201,7 @@ a:hover {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
 .footer-paralax {
   padding: 4rem 0 0 0;
 }
@@ -1205,7 +1220,7 @@ a:hover {
 .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #ed3c0d;
+  background: #0ded41;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1261,7 +1276,7 @@ a:hover {
 }
 
 .php-email-form button[type=submit] {
-  background: #0078ff;
+  background: #ff0000;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1269,7 +1284,7 @@ a:hover {
 }
 
 .php-email-form button[type=submit]:hover {
-  background: #3393ff;
+  background: #33ff4b;
 }
 
 @keyframes animate-loading {
@@ -1517,7 +1532,6 @@ footer .credits {
 footer .credits a {
   color: #fff;
 }
-
 
 /* Form box Color */
 .box-shadow-full2 {
